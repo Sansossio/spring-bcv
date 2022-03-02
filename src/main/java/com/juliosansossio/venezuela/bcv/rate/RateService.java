@@ -25,7 +25,6 @@ public class RateService {
   }
 
   public Double getRate(RateTypeEnum type) throws Exception {
-    type = type == null ? RateTypeEnum.DOLLAR : type;
     Document document = this.domParser.get(this.BCV_URL);
     String rate = document.select(this.getSelectorByEnum(type)).text();
     rate = rate.replace(",", ".");

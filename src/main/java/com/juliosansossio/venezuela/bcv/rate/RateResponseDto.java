@@ -1,7 +1,11 @@
 package com.juliosansossio.venezuela.bcv.rate;
 
+import javax.validation.constraints.NotNull;
+
 public class RateResponseDto {
+  @NotNull
   private final RateTypeEnum type;
+  @NotNull
   private final Double rate;
 
   public RateResponseDto(RateTypeEnum type, Double rate) {

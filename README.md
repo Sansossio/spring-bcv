@@ -1,5 +1,8 @@
 # BCV
 
+## OpenApi / Swagger
+Url: [http://localhost:3002/swagger](http://localhost:3002/swagger)
+
 ## Example endpoints
 
 - Dollar
