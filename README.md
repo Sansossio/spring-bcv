@@ -6,10 +6,9 @@ Url: [http://localhost:3002/swagger](http://localhost:3002/swagger)
 ## Example endpoints
 
 - Dollar
-  - [http://localhost:3002](http://localhost:3002/)
-  - [http://localhost:3002/?type=DOLLAR](http://localhost:3002/?type=DOLLAR)
+  - [http://localhost:3002/rate/DOLLAR](http://localhost:3002/rate/DOLLAR)
 - Eur
-  - [http://localhost:3002/?type=EUR](http://localhost:3002/?type=EUR)
+  - [http://localhost:3002/rate/EUR](http://localhost:3002/rate/EUR)
 
 ### Example response
 
