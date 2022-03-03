@@ -10,6 +10,13 @@ Url: [http://localhost:3002/swagger](http://localhost:3002/swagger)
 - Eur
   - [http://localhost:3002/rate/EUR](http://localhost:3002/rate/EUR)
 
+Supported currencies:
+  - DOLLAR  (USD)
+  - EUR
+  - CNY
+  - TRY
+  - RUB
+
 ### Example response
 
 <img src="doc/example-response.jpg"/>

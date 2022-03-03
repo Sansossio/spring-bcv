@@ -13,20 +13,34 @@ public class RateService {
   @Autowired
   private DomParser domParser;
 
-  private String getSelectorByEnum(RateTypeEnum type) throws Exception {
+  private String getSelector (RateTypeEnum type) {
+    String id;
     switch (type) {
       case DOLLAR:
-        return "#dolar > div > div > div.col-sm-6.col-xs-6.centrado > strong";
+        id = "dolar";
+        break;
       case EUR:
-        return "#euro > div > div > div.col-sm-6.col-xs-6.centrado > strong";
+        id = "euro";
+        break;
+      case CNY:
+        id = "yuan";
+        break;
+      case TRY:
+        id = "lira";
+        break;
+      case RUB:
+        id = "rublo";
+        break;
       default:
-        throw new Exception("Invalid rate type");
+        throw new IllegalArgumentException("Invalid type");
     }
+    return "#" + id + " > div > div > div.col-sm-6.col-xs-6.centrado > strong";
   }
 
   public Double getRate(RateTypeEnum type) throws Exception {
     Document document = this.domParser.get(this.BCV_URL);
-    String rate = document.select(this.getSelectorByEnum(type)).text();
+    String selector = this.getSelector(type);
+    String rate = document.select(selector).text();
     rate = rate.replace(",", ".");
     return Double.parseDouble(rate);
   }
