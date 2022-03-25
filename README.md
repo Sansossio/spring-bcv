@@ -1,7 +1,7 @@
 # BCV
 
 ## OpenApi / Swagger
-Url: [http://localhost:3002/swagger](http://localhost:3002/swagger)
+Url: [http://localhost:3002/swagger-ui](http://localhost:3002/swagger-ui)
 
 ## Example endpoints
 
